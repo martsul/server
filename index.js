@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: process.env.FROM || "https://your-app-name.up.railway.app",
+        origin: "https://client-glcl.onrender.com",
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization", "Cache-Control"],
