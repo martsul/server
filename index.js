@@ -2,8 +2,6 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import router from "./src/router/index.js";
 import cors from "cors";
-import path from "path";
-import { fileURLToPath } from "url";
 
 const PORT = process.env.PORT || 5000;
 
