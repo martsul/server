@@ -49,7 +49,7 @@ class AuthorizationController {
 
     async #requestData() {
         const [result] = await pool.query(
-            "SELECT email FROM users WHERE email = ? AND password = ?",
+            "SELECT isBlocked FROM users WHERE email = ? AND password = ?",
             [this.#receivedData.email, this.#receivedData.password]
         );
 
@@ -68,7 +68,7 @@ class AuthorizationController {
 
     async #validate() {
         await this.#emailValidate();
-        const { isBlocked } = await this.#requestData();
+        const  {isBlocked}  = await this.#requestData();
         this.#validateBan(isBlocked);
     }
 
