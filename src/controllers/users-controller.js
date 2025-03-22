@@ -30,6 +30,8 @@ class UsersController {
         this.#email = this.#request.cookies.userEmail;
         this.#password = this.#request.cookies.userPassword;
 
+        console.log(this.#email, this.#password);
+
         this.#resetCookies();
     }
 
