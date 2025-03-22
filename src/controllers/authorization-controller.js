@@ -23,13 +23,17 @@ class AuthorizationController {
 
     #setCookies() {
         this.#response.cookie("userEmail", this.#receivedData.email, {
-            maxAge: 108000,
+            maxAge: 1080000,
             httpOnly: true,
+            sameSite: "none",
+            secure: true,
         });
 
         this.#response.cookie("userPassword", this.#receivedData.password, {
-            maxAge: 108000,
+            maxAge: 1080000,
             httpOnly: true,
+            sameSite: "none",
+            secure: true,
         });
     }
 
