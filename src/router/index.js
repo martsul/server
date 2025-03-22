@@ -4,7 +4,7 @@ import { usersController } from "../controllers/users-controller.js";
 
 const router = new Router();
 
-router.get("/users", usersController("getUsers"));
+router.post("/users", usersController("getUsers"));
 router.post("/delete", usersController("deleteUsers"));
 router.post("/banned", usersController("bannedUsers"));
 router.post("/unbanned", usersController("unbannedUsers"));
